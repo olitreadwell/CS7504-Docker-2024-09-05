@@ -1,2 +1,4 @@
-FROM httpd:latest
-COPY index.html /usr/local/apache2/htdocs/
+FROM node:alpine
+COPY . /app
+WORKDIR /app
+CMD node app.js
